@@ -43,6 +43,6 @@ void insert_sort_list(listint_t **list)
 			}
 		}
 		c = nextnode;
-		c = (nextnode = c->next) : (nextnode = NULL);
+		c ? (nextnode = c->next) : (nextnode = NULL);
 	}
 }
