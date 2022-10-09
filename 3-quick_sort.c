@@ -42,7 +42,7 @@ int partition(int *array, int start, int end, int size)
  * @end: end of array r subarray
  * @size: size of full array
  */
-void quickSort(int *array, int start, int end, int size)
+/*void quickSort(int *array, int start, int end, int size)
 {
 	int pivot;
 
@@ -54,7 +54,7 @@ void quickSort(int *array, int start, int end, int size)
 		quickSort(array, pivot + 1, end, size);
 		printf("%d start %d pivot %d size\n", start, pivot + 1, size);
 	}
-}
+}*/
 /**
  * quick_sort - quick sort an array
  * @array: array to sort
