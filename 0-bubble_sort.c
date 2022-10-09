@@ -26,7 +26,7 @@ void bubble_sort(int *array, size_t size)
 				swap = 1;
 			}
 		}
-		newsiez--;
+		newsize--;
 		if (!swap)
 			break;
 	}
