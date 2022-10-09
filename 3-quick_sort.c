@@ -26,7 +26,7 @@ int partition(int *array, int start, int end, int size)
 			i++;
 		}
 	}
-	if (i != endd)
+	if (i != end)
 	{
 		temp = array[i];
 		array[i] = array[end];
