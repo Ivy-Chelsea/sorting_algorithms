@@ -3,7 +3,7 @@
  * insertion_sort_list - inserts right unsorted side into left sorted side
  * @list: doubly linked list to sort
  */
-void insert_sort_list(listint_t **list)
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *c, *p, *nextnode;
 
