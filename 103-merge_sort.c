@@ -16,7 +16,7 @@ void merge_split(int *subarr, int *buff, size_t front, size_t mid,
 		 size_t back)
 {
 	size_t a, b, c = 0;
-	
+
 	printf("Merging...\n[left]: ");
 	print_array(subarr + front, mid - front);
 
@@ -52,7 +52,7 @@ void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 		merge_sort_recursive(subarr, buff, front, mid);
 		merge_sort_recursive(subarr, buff, mid, back);
 		merge_split(subarr, buff, front, mid, back);
-    	}
+	}
 }
 
 /**
@@ -66,13 +66,13 @@ void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 void merge_sort(int *array, size_t size)
 {
 	int *buff;
-	
-	if(array == NULL || size < 2)
+
+	if (array == NULL || size < 2)
 		return;
 	buff = malloc(sizeof(int) * size);
 	if (buff == NULL)
 		return;
-	
+
 	merge_sort_recursive(array, buff, 0, size);
 	free(buff);
 }
