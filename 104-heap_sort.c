@@ -11,7 +11,7 @@ void max_heap(int *array, size_t size, size_t base, size_t root);
 void swap_ints(int *a, int *b)
 {
   int temp;
-
+  
   temp = *a;
   *a = *b;
   *b = temp;
@@ -38,11 +38,11 @@ void max_heap(int *array, size_t size, size_t base, size_t root)
     large = right;
 
   if (large != root)
-    {
-      swap_ints(array + root, array + large);
-      print_array(array, size);
-      max_heap(array, size, base, large);
-    }
+  {
+    swap_ints(array + root, array + large);
+    print_array(array, size);
+    max_heap(array, size, base, large);
+  }
 }
 
 /**
@@ -64,9 +64,9 @@ void heap_sort(int *array, size_t size)
     max_heap(array, size, size, i);
 
   for (i = size - 1; i > 0; i--)
-    {
-      swap_ints(array, array + i);
-      print_array(array, size);
-      max_heap(array, size, i, 0);
-    }
+  {
+    swap_ints(array, array + i);
+    print_array(array, size);
+    max_heap(array, size, i, 0);
+  }
 }
