@@ -63,7 +63,7 @@ void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow)
  *                order using the bitonic sort algorithm
  * @array: An array of int
  * @size: size of the array
- * 
+ *
  * Description: Only works for size = 2^k where k >= 0
  * (size equals to powers of 2)
  */
