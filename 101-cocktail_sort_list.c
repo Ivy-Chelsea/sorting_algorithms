@@ -70,5 +70,5 @@ void cocktail_sort_list(listint_t **list)
 				c = c->prev;
 		}
 		c = c->next;
-	}while (swapped);
+	} while (swapped);
 }
