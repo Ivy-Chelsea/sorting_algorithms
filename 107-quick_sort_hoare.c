@@ -24,12 +24,10 @@ int hoare_partition(int *array, size_t size, int left, int right)
 	pivot = array[right];
 	for (above = left - 1, below = right + 1; above < below;)
 	{
-		do
-		{
+		do {
 			above++;
 		} while (array[above] < pivot);
-		do
-		{
+		do {
 			below--;
 		} while (array[below] > pivot);
 
