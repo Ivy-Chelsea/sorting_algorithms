@@ -69,6 +69,7 @@ void cocktail_sort_list(listint_t **list)
 	if (list == NULL || !(*list) || (*list)->next == NULL)
 		return;
 
+<<<<<<< HEAD
 	for (tail = *list; tail->next != NULL;)
 	  tail = tail->next;
 
@@ -95,4 +96,36 @@ void cocktail_sort_list(listint_t **list)
 		  }
 	      }
 	  }
+=======
+	c = (*list);
+	do {
+		swapped = 0;
+		while (c->next)
+		{
+			nextnode = c->next;
+			if (nextnode && c->n > nextnode->n)
+			{
+				swap(c, nextnode, list);
+				swapped = 1;
+				print_list((*list));
+			}
+			else
+				c = c->next;
+		}
+		c = c->prev;
+		while (c->prev)
+		{
+			nextnode = c->prev;
+			if (nextnode && c->n < nextnode->n)
+			{
+				swap(c, nextnode, list);
+				swapped = 1;
+				print_list((*list));
+			}
+			else
+				c = c->prev;
+		}
+		c = c->next;
+	} while (swapped);
+>>>>>>> 3d4ca240c087cc8d273a13ba1bc20716a236468a
 }
